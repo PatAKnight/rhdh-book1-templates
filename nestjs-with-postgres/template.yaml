@@ -97,7 +97,7 @@ spec:
         repoUrl: github.com?owner=${{parameters.githubGroup}}&repo=${{parameters.namespace}}-${{parameters.application_id}}
         defaultBranch: main
         protectDefaultBranch: false
-        repoVisibility: public
+        repoVisibility: private
     - id: templateGitops
       name: Generating the deployment resources and artefacts
       action: fetch:template
@@ -129,7 +129,7 @@ spec:
         sourcePath: ./tenant-gitops
         defaultBranch: main
         protectDefaultBranch: false
-        repoVisibility: public
+        repoVisibility: private
     - id: registerSource
       name: Register NestJS Service Component
       action: catalog:register
